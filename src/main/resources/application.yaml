@@ -1,0 +1,12 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: config-server
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+  datasource:
+    username: ${PG_USERNAME}
+    password: ${PG_PASSWORD}
+    url: ${PG_URL}
