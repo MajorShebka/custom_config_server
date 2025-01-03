@@ -10,3 +10,8 @@ spring:
     username: ${PG_USERNAME}
     password: ${PG_PASSWORD}
     url: ${PG_URL}
+  kafka:
+    producer:
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      bootstrap-servers: ${BOOTSTRAP_SERVERS}

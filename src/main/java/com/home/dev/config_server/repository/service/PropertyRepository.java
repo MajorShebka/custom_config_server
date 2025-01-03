@@ -8,5 +8,8 @@ import java.util.List;
 
 @Repository
 public interface PropertyRepository extends CrudRepository<Property, Long> {
+
     List<Property> findByServiceName(String serviceName);
+
+    Property findByServiceNameAndName(String serviceName, String value);
 }

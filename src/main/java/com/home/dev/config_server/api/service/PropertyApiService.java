@@ -32,4 +32,11 @@ public class PropertyApiService {
         propertyService.create(property);
         return new PropertyResponse();
     }
+
+    @PutMapping()
+    public PropertyResponse updateProperty(@RequestBody PropertyRequest request) {
+        var property = getMapper(PropertyMapper.class).map(request.getProperty());
+        propertyService.update(property);
+        return new PropertyResponse();
+    }
 }
